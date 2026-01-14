@@ -33,7 +33,8 @@ require_once __DIR__ . '/../helpers/auth.php';
                 
                 <a href="/eSante-CI/public/index.php?page=logout" class="btn btn-secondary">Se déconnecter</a>
             <?php else: ?>
-                <a href="/eSante-CI/public/index.php?page=login" class="btn">Se connecter</a>
+                <a href="/login.php" class="btn">Se connecter</a>
+
                 <a href="/eSante-CI/public/index.php?page=register" class="btn btn-success">S'inscrire</a>
             <?php endif; ?>
         </div>
