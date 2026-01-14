@@ -1,0 +1,21 @@
+<?php
+require_once __DIR__ . '/../app/helpers/auth.php';
+
+if (!est_connecte()) {
+    header('Location: /login.php');
+    exit;
+}
+?>
+
+<h2>Tableau de bord</h2>
+
+<p>Bienvenue <?= $_SESSION['prenom'] ?> <?= $_SESSION['nom'] ?></p>
+<p>Rôle : <?= ucfirst($_SESSION['role']) ?></p>
+
+<ul>
+    <li>Consulter dossier médical</li>
+    <li>Voir consultations</li>
+    <li>Ordonnances</li>
+</ul>
+
+<a href="/logout.php">Se déconnecter</a>
